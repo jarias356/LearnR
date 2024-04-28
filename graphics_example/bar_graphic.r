@@ -33,14 +33,15 @@ View(operationTable)
 
 # legendText <- paste(operationTable$Id_operacion, operationTable$Tipo_de_operacion, sep=": ")
 
+# GRAPHIC
 barplot(
   operationTable$Numero_de_casos,
   names.arg = operationTable$Id_operacion,
   # legend.text = legendText,
   axisnames = TRUE,
   col = "blue",
+  space = 0,
   main = "Numero de casos por tipo de operación",
   xlab = "Tipo de operación",
   ylab = "Numero de casos"
 )
-
