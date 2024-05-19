@@ -30,3 +30,13 @@ operationTable <- data.frame(
   Id_operacion
 )
 View(operationTable)
+
+boxplot(
+  data = operationTable,
+  operationTable$Numero_de_casos ~ operationTable$Tipo_de_operacion,
+  horizontal = TRUE,
+  notch = TRUE,
+  add = TRUE,
+  main = "Numero de casos por tipo de operación",
+  xlab = "Tipo de operación",
+  ylab = "Numero de casos")

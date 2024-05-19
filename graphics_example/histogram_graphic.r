@@ -41,7 +41,7 @@ fashionNumberCases <- mode(operationTable$Numero_de_casos_factor)
 
 paste("Media: ", meanNumberCases)
 paste("Mediana: ", medianNumberCases)
-paste("Moda: ", fashionNumberCases)
+paste("Moda: ", fashionNumberCases)a
 
 # Sesgada positivamente: Madia es mayor a la mediana, y la media es mayor a la moda
 # Sesgada negativamente: Madia es menor a la mediana, y la media es menor a la moda
@@ -52,5 +52,11 @@ paste("Moda: ", fashionNumberCases)
 # Ditribución normal: Es batsante simetrica con forma de campana
 
 hist(operationTable$Numero_de_casos, col = "blue", main = "Histograma de casos por tipo de operación", xlab = "Numero de casos", ylab = "Frecuencia", breaks = 10)
+
+data(women)
+View(women)
+
+hist(women$height, col = "blue", main = "Histograma de altura de mujeres", xlab = "Altura", ylab = "Frecuencia", breaks = 10)
+hist(women$weight, col = "blue", main = "Histograma de peso de mujeres", xlab = "Peso", ylab = "Frecuencia", breaks = 10)
 
 
