@@ -60,3 +60,35 @@ coef_asimetria_education = (education_media-7)/education_desv_estandar
 paste("Coeficiente de asimetría de Pearson de la educación: ", coef_asimetria_education)
 print("---------")
 
+
+#CURTOSIS
+#Cc > 3: Leptocúrtica
+#Cc = 3: Mesocurtica
+#Cc < 3: Platicúrtica
+Fuerza_de_atraccion = c(296,338,341,261,250,347,336,297,279,297,259,334,281,284,279,266,300,305,310,253)
+curtosis_fuerza_de_atraccion = kurtosis(Fuerza_de_atraccion)
+
+hombres = c(173,178,145,146,157,175,173,137,152,171,163,170,135,159,199,131)
+curtosis_hombres = kurtosis(hombres)
+
+data("swiss")
+View(swiss)
+
+curtosis_education = kurtosis(swiss$Education)
+
+#EJERCICIO 3
+
+m1 = c(5,5,6,3,7,6,6,7,8,6,6,7,5,7,6,6,7,6,4,5)
+m2 = c(1,6,6,8,6,5,7,6,10,6,7,5,7,6,5,6,6,8,5,9)
+
+m3 = c(5,7,3,5,5,5,6,5,9,3,5,7,7,9,7,8,5,10,8,9)
+
+#Asimetrias
+m1_asimetria = skewness(m1)
+m2_asimetria = skewness(m2)
+m3_asimetria = skewness(m3)
+
+#Curtosis
+m1_curtosis = kurtosis(m1)
+m2_curtosis = kurtosis(m2)
+m3_curtosis = kurtosis(m3)
