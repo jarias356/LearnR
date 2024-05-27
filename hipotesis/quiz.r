@@ -12,12 +12,16 @@ library(RColorBrewer)
 install.packages("moments")
 library(moments)
 
+data(Orange)
+View(Orange)
+
+edad <- Orange$age
 
 # Calcular T-Student
-media <- 27.5 # Medía obtenida del ejercicio
-media_poblacional <- 25 # Media poblacional del ejercicio
-desviacion_estandar <- 5 # Desvisción esntandar del ejercicio
-N <- 15 # Número de muestras
+media <- mean(edad)
+media_poblacional <- 985 # Media poblacional del ejercicio
+desviacion_estandar <- sd(edad) # Desvisción esntandar del ejercicio
+N <- 35 # Número de muestras
 
 
 # Calcular T-Student
@@ -26,7 +30,7 @@ N <- 15 # Número de muestras
 tstudent <- (media-media_poblacional) / (desviacion_estandar / sqrt(N))
 paste("T-Studfent -> ", tstudent)
 
-nivel_signifcancia <- 0.01 # Nivel de significacía del 1%, Rango de error del ejercicio
+nivel_signifcancia <- 0.05 # Nivel de significacía del 1%, Rango de error del ejercicio
 grados_de_libertad <- N - 1 
 paste("Grados de libertad -> ", grados_de_libertad)
 # Grado de libertad, si es varianaza y desviación estandar simple se resta 1
