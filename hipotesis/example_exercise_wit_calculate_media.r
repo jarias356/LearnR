@@ -21,7 +21,7 @@ N <- 16
 tstudent <- (media-media_poblacional) / (desviacion_estandar / sqrt(N))
 tstudent
 
-nivel_signifcancia <- 0.05 # Nivel de significacía del 1%, Rango de error del ejercicio
+nivel_signifcancia <- 0.05 # Nivel de siginifiacncia por defecto, sim el ejercicio no lo da
 grados_de_libertad <- N - 1 
 
 
